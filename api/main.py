@@ -4,7 +4,8 @@ from PIL import Image
 import tensorflow as tf
 import uvicorn
 import socket
-socket.getaddrinfo('127.0.0.1', 8080)
+import numpy as np
+#socket.getaddrinfo('127.0.0.1', 8080)
 
 app = FastAPI()
 
@@ -198,7 +199,7 @@ CLASS_NAMES = ['abies_concolor',
 async def ping():
     return "Hello I'm alive server"
 
-def read_files_as_image(data) -> np.ndarray:
+def read_file_as_image(data) -> np.ndarray:
     image = np.array(Image.open(BytesIO(data)))
     return image
 
@@ -207,10 +208,17 @@ async def predict(
     file: UploadFile = File(...)
 
 ):
-    image = read_files_as_image(await file.read())
-    MODEL.predict(image)
+    image = read_file_as_image(await file.read())
     img_batch = np.expand_dims(image,0)
+    
     prediction = MODEL.predict(img_batch)
+
+    predicted_class = CLASS_NAMES[np.argmax(prediction[0])]
+    confidence = np.max(prediction[0])
+    return {
+        'class': predicted_class,
+        'confidence': float(confidence)
+    }
     pass
 
 if __name__ == "__main__":

@@ -195,6 +195,19 @@ CLASS_NAMES = ['abies_concolor',
  'ulmus_rubra',
  'zelkova_serrata']
 
+
+origins = [
+    "http://http://127.0.0.1",
+    "http://http://127.0.0.1:3000",
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 @app.get("/ping")
 async def ping():
     return "Hello I'm alive server"

@@ -3,6 +3,7 @@ from io import BytesIO
 from PIL import Image
 import tensorflow as tf
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 import socket
 import numpy as np
 #socket.getaddrinfo('127.0.0.1', 8080)
@@ -197,8 +198,8 @@ CLASS_NAMES = ['abies_concolor',
 
 
 origins = [
-    "http://http://127.0.0.1",
-    "http://http://127.0.0.1:3000",
+    "http://localhost",
+    "http://localhost:3000",
 ]
 app.add_middleware(
     CORSMiddleware,

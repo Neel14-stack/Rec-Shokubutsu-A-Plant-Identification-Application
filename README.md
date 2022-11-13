@@ -1,2 +1,2 @@
-# Rec Shokubutsu: A Plant Identification Application
+# Rec Shokubutsu: A Plant Identification Application 🈸
 

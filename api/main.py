@@ -10,7 +10,7 @@ import numpy as np
 
 app = FastAPI()
 
-MODEL = tf.keras.models.load_model("D:/Uzumaki/GitHub/Plant_disease/plant.h5")
+MODEL = tf.keras.models.load_model("D:/Uzumaki/GitHub/Plant_disease/models/1")
 CLASS_NAMES = ['abies_concolor',
  'abies_nordmanniana',
  'acer_campestre',

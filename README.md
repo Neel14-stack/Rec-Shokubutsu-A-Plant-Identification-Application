@@ -7,9 +7,10 @@ Plants are the backbone of all life and there are about **40 million plant speci
 
 Software Specification 📌
 
-• Python 3.7 or higher
-• Jupyter/Colab Notebook
-• Numpy, Scikit-Learn, Deep Learning and other machine learning libraries
-• TensorFlow/Keras deep learning framework
-• Flask web development framework
-• VSCode code editor for editor for editing the python script
+ * Python 3.7 or higher
+ * Jupyter/Colab Notebook
+ * Numpy, Scikit-Learn, Deep Learning and other machine learning libraries
+ * TensorFlow/Keras deep learning framework
+ * Fast API framework
+ * VSCode code editor for editing the python script.
+ * Browser

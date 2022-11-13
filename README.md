@@ -14,3 +14,9 @@ Plants are the backbone of all life and there are about **40 million plant speci
  * Fast API framework
  * VSCode code editor for editing the python script.
  * Browser
+
+## Hardware Specification 📌
+
+* A minimum of 8GB RAM. And GPU with at least 2GB RAM.
+* A minimum of 20GB hard drive space.
+* Internet connection for accessing online GPU such as Kaggle or Google Colab.

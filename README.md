@@ -1,1 +1,2 @@
-# Plant_disease
+# Rec Shokubutsu: A Plant Identification Application
+

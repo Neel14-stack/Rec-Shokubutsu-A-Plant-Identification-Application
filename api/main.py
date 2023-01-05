@@ -6,7 +6,7 @@ import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 import socket
 import numpy as np
-#socket.getaddrinfo('127.0.0.1', 8080)
+socket.getaddrinfo('127.0.0.1', 7000)
 
 app = FastAPI()
 
@@ -236,4 +236,4 @@ async def predict(
     pass
 
 if __name__ == "__main__":
-    uvicorn.run(app, host='127.0.0.1',port = 8080)
+    uvicorn.run(app, host='127.0.0.1',port = 7000)
